@@ -8,6 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use App\Models\User;
 
 class WelcomeEmail extends Mailable
 {
@@ -26,7 +27,7 @@ class WelcomeEmail extends Mailable
     public function build()
     {
         return $this->markdown('emails.welcome')
-                    ->subject('Welcome to Our Site');
+            ->subject('Welcome to Our Site');
     }
 
     /**
